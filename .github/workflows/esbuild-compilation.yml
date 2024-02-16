@@ -35,6 +35,7 @@ jobs:
           mkdir ./scripts
           cp -r ./sfdx-core-esbuild-workflow/*.js ./scripts
           cp ./sfdx-core-esbuild-workflow/tsconfig.json ./scripts
+          ls ./scripts
       - name: Setup esbuild Dependencies
         run: |
           yarn add esbuild@^0.19.5 -D
