@@ -52,6 +52,6 @@ jobs:
           node scripts/build.js
       - name: Publish a Package
         run: |
-          yarn publish
+          npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
