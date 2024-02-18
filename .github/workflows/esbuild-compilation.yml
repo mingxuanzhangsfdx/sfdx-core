@@ -49,6 +49,7 @@ jobs:
       - name: Update for Bundling
         run: |
           node scripts/updateForBundling.js
+          npm config ls -l
       - name: Generate Bundle
         run: |
           node scripts/build.js
