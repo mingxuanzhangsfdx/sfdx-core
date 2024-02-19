@@ -49,12 +49,12 @@ jobs:
       - name: Update for Bundling
         run: |
           node scripts/updateForBundling.js
-          npm config ls -l
       - name: Generate Bundle
         run: |
           node scripts/build.js
       - name: Publish a Package
         run: |
+          npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
           npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
